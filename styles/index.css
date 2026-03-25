@@ -40,6 +40,9 @@
     border-radius: 2%;
     font-size: 32px;
     border: 4px black;
+    display: flex;
+    flex-direction:column ;
+    float: right;
 }
 
 .result-screen{

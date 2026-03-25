@@ -1,6 +1,5 @@
 let fullOp = "";
-let x="";
-let y="";
+let x,y;
 
 function handleClick(number) {
     console.log(number);
@@ -44,17 +43,21 @@ function calculate() {
     showNumber2(fullOp);
 }
 
-function showNumber1(n) {
-    y=n;
-    document.getElementById("screen1").innerHTML = n;
-    return y;
+function showNumber1(x) {
+    //y=n;
+    document.getElementById("screen1").innerHTML = x;
+    document.getElementById("screen3").innerHTML += x;
 }
-function showNumber2(n) {
-    x=n;
-    document.getElementById("screen2").innerHTML = n;
-    return x;
+function showNumber2(y) {
+    // x=n;
+    document.getElementById("screen2").innerHTML = y;
+    document.getElementById("screen3").innerHTML += y;
+    
 }
 
-function showResults(n) {
-    document.getElementById("screen3").innerHTML = n;
-}
+// function showResults() {
+//     document.getElementById("screen3").
+//     // n=y+x;
+
+//     innerHTML = n;
+// }
