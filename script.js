@@ -42,18 +42,16 @@ function calculate() {
     }
 
     showNumber2(res);
-    document.getElementById("screen3").innerHTML += a + op + b + " = " + res + "<br>";
+    document.getElementById("screen3").innerHTML += a + op + b + "=" + res + "<br>";
 
     fullOp = String(res);
 }
 
 function showNumber1(x) {
-    //y=n;
     document.getElementById("screen1").innerHTML = x;
 }
 
 function showNumber2(y) {
-    // x=n;
     document.getElementById("screen2").innerHTML = y;
 
 }
