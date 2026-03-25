@@ -37,27 +37,24 @@ function calculate() {
             res = Math.sqrt(Number(a));
         case "^":
             res = Number(a)**Number(b);
+        default:
+            return;
     }
 
+    showNumber2(res);
+    document.getElementById("screen3").innerHTML += a + op + b + " = " + res + "<br>";
+
     fullOp = String(res);
-    showNumber2(fullOp);
 }
 
 function showNumber1(x) {
     //y=n;
     document.getElementById("screen1").innerHTML = x;
-    document.getElementById("screen3").innerHTML += x;
 }
+
 function showNumber2(y) {
     // x=n;
     document.getElementById("screen2").innerHTML = y;
-    document.getElementById("screen3").innerHTML += y;
-    
+
 }
 
-// function showResults() {
-//     document.getElementById("screen3").
-//     // n=y+x;
-
-//     innerHTML = n;
-// }
