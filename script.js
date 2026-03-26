@@ -17,6 +17,15 @@ function handleClick(number) {
     showNumber1(fullOp);
 }
 
+function handleClick2(number) {
+    console.log(number);
+    if(number==='Clear All'){
+        fullOp='';
+        document.getElementById("screen3").innerHTML = fullOp;
+        return;
+    }
+}
+
 function calculate() {
     let res = 0;
     const [a, op, b] = fullOp.split(/(\+|-|x|\√|\^|\/)/);

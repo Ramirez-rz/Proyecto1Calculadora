@@ -110,6 +110,13 @@
     background: white;
 }
 
+.btnPrev-container{
+    display: flex;
+    gap: 20px;
+    justify-content: left;
+    background: #E6E6E6;
+}
+
 .mega-container{
     width:100%;
     display: flex;
