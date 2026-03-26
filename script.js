@@ -27,7 +27,7 @@ function handleClick2(number) {
 
 function calculate() {
     let res = 0;
-    const [a, op, b] = fullOp.split(/(\+|-|x|\EXP|\/)/);
+    const [a, op, b] = fullOp.split(/(\+|-|x|\/|\^)/);
     switch (op) {
         case "+":
             res = Number(a) + Number(b);
@@ -41,8 +41,9 @@ function calculate() {
         case "/":
             res = Number(a) / Number(b);
             break;
-        case "EXP":
+        case "^":
             res = Number(a)**Number(b);
+            break;
         default:
             return;
     }
