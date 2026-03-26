@@ -48,10 +48,12 @@ function calculate() {
 }
 
 function showNumber1(x) {
+    //y=n;
     document.getElementById("screen1").innerHTML = x;
 }
 
 function showNumber2(y) {
+
     document.getElementById("screen2").innerHTML = y;
 
 }
