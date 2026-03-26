@@ -1,34 +1,33 @@
 let fullOp = "";
-let x,y;
 
 function handleClick(number) {
     console.log(number);
-    if(number==='CE'){
-        fullOp='';
+    if (number === 'CE') {
+        fullOp = '';
         showNumber1(fullOp);
         showNumber2(fullOp);
         return;
-    }else if(number==('<')){
-        number='';
+    } else if (number === '<') {
+        fullOp = fullOp.slice(0, -1);
+        showNumber1(fullOp);
+        if (fullOp === '') {
+            showNumber2('');
+        }
+        return;
     }
-
-
     fullOp = fullOp + number;
     showNumber1(fullOp);
 }
 
 function handleClick2(number) {
-    console.log(number);
-    if(number==='Clear All'){
-        fullOp='';
-        document.getElementById("screen3").innerHTML = fullOp;
-        return;
+    if (number === 'Clear All') {
+        document.getElementById("screen3").innerHTML = '';
     }
 }
 
 function calculate() {
     let res = 0;
-    const [a, op, b] = fullOp.split(/(\+|-|x|\√|\^|\/)/);
+    const [a, op, b] = fullOp.split(/(\+|-|x|\EXP|\/)/);
     switch (op) {
         case "+":
             res = Number(a) + Number(b);
@@ -42,9 +41,7 @@ function calculate() {
         case "/":
             res = Number(a) / Number(b);
             break;
-        case "√":
-            res = Math.sqrt(Number(a));
-        case "^":
+        case "EXP":
             res = Number(a)**Number(b);
         default:
             return;
