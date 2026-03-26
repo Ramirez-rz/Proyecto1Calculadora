@@ -4,7 +4,7 @@
     font-weight: lighter;
 }
 
-.main-container {
+.main-container{
     width:500px;
     height: 750px;
     padding: 2%;
@@ -47,6 +47,7 @@
     flex-direction:column ;
     float: right;
     justify-content: right;
+    gap: 15%;
 }
 
 .result-screen{
@@ -68,6 +69,12 @@
     justify-content: right;
 
     
+}
+
+.spaced-underline{
+    text-decoration: underline;
+    text-underline-offset: 10px; 
+    text-decoration-thickness: 3.1px; 
 }
 
 .btn{

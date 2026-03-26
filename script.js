@@ -63,7 +63,7 @@ function calculate() {
     }
 
     showNumber2(res);
-    document.getElementById("screen3").innerHTML += a + op + b + "=" + res + "<br>"+"<br>";
+    document.getElementById("screen3").innerHTML += a + op + b + "=" + res + "<br>";
 
     fullOp = String(res);
 }
