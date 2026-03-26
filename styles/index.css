@@ -1,6 +1,7 @@
 
 .tytext{
-    font-family: sans-serif;;
+    font-family: sans-serif;
+    font-weight: lighter;
 }
 
 .main-container {
@@ -32,8 +33,8 @@
     flex-direction:column ;
     float: right;
     border-radius: 5%;
-    background: #BDBDBD;
-    color: gray; 
+    background: #E6E6E6;
+    color: black; 
 }
 
 .prev-screen{
@@ -45,6 +46,7 @@
     display: flex;
     flex-direction:column ;
     float: right;
+    justify-content: right;
 }
 
 .result-screen{
