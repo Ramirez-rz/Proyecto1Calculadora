@@ -15,6 +15,15 @@ function handleClick(number) {
         }
         return;
     }
+
+    const lastChar = fullOp.slice(-1);
+
+    if (number === '-' && (fullOp === '' || "+-x/^".includes(lastChar))) {
+        fullOp += '-';
+        showNumber1(fullOp);
+        return;
+    }
+
     fullOp = fullOp + number;
     showNumber1(fullOp);
 }
@@ -27,7 +36,12 @@ function handleClick2(number) {
 
 function calculate() {
     let res = 0;
-    const [a, op, b] = fullOp.split(/(\+|-|x|\/|\^)/);
+    const parts = fullOp.match(/(-?\d+\.?\d*)([+\-x\/^])(-?\d+\.?\d*)/);
+    if (!parts) return;
+    const a = parts[1];
+    const op = parts[2];
+    const b = parts[3];
+
     switch (op) {
         case "+":
             res = Number(a) + Number(b);
@@ -49,19 +63,16 @@ function calculate() {
     }
 
     showNumber2(res);
-    document.getElementById("screen3").innerHTML += a + op + b + "=" + res + "<br>";
+    document.getElementById("screen3").innerHTML += a + op + b + "=" + res + "<br>"+"<br>";
 
     fullOp = String(res);
 }
 
 function showNumber1(x) {
-    //y=n;
     document.getElementById("screen1").innerHTML = x;
 }
 
 function showNumber2(y) {
-
     document.getElementById("screen2").innerHTML = y;
-
 }
 
