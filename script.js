@@ -7,7 +7,7 @@ function handleClick(number) {
         showNumber1(fullOp);
         showNumber2(fullOp);
         return;
-    } else if (number === '<') {
+    } else if (number === '') {
         fullOp = fullOp.slice(0, -1);
         showNumber1(fullOp);
         if (fullOp === '') {
@@ -62,8 +62,8 @@ function calculate() {
             return;
     }
 
-    showNumber2(res);
-    document.getElementById("screen3").innerHTML += a + op + b + "=" + res + "<br>";
+    showNumber2(res.toFixed(2));
+    document.getElementById("screen3").innerHTML += a + op + b + "=" + res.toFixed(2) + "<br>";
 
     fullOp = String(res);
 }
