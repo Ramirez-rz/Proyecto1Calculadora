@@ -33,7 +33,6 @@
     flex-direction:column ;
     float: right;
     border-radius: 5%;
-    background: #E6E6E6;
     color: black; 
 }
 
@@ -98,12 +97,8 @@
 }
 
 .color{
-    background:#505052;
+    background: black;
     color:white;
-}
-
-.color2{
-    background: #BDBDBD
 }
 
 .color3{
@@ -117,11 +112,24 @@
     background: white;
 }
 
+.headerPrev {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .btnPrev-container{
+    width: 200px;
     display: flex;
     gap: 20px;
     justify-content: left;
-    background: #E6E6E6;
+}
+
+.TituloPrev-container{
+    width: 500px;
+    display: flex;
+    gap: 20px;
+    justify-content: left;
 }
 
 .mega-container{
