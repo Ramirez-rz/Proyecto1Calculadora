@@ -34,3 +34,5 @@ Repositorio en GitHub que incluya:
 - Validaciones (regex + lógica)	        15%
 - UI/UX	                                10%
 - Organización del código	            10%
+
+![Calculator Preview](Stitch.png)
